@@ -17,7 +17,6 @@ pipeline {
       }
       steps {
         snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS_DEV}")
-        snPublishApp(credentialsId: "${CREDENTIALS_DEV}", appSysId: "${APPSYSID}", obtainVersionAutomatically: true, url: "${DEVENV}")
       }
     }
     stage('Deploy to Prod') {
